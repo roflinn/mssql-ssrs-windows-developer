@@ -1,8 +1,8 @@
 # SQL Server Reporting Services in Docker
 
-creates a fresh install of SSRS in a container - pretty useful for dev / test - not for production use!
+creates a fresh install of SSRS in a container
 
-https://hub.docker.com/r/phola/ssrs
+https://hub.docker.com/r/roflinn/ssrs
 
 ## Run it
 
@@ -18,7 +18,7 @@ In addtion it accepts two more env variables: </br>
 example:
 
 ```
-docker run -d -p 8433:8433 -p 8080:8080 -v C:/temp/:C:/temp/ -e sa_password=<YOUR SA PASSWORD> -e ACCEPT_EULA=Y -e ssrs_user=SSRSAdmin -e ssrs_password=<YOUR SSRSAdmin PASSWORD> --memory 6048mb phola/ssrs
+docker run -d -p 8433:8433 -p 8080:8080 -v C:/temp/:C:/temp/ -e sa_password=<YOUR SA PASSWORD> -e ACCEPT_EULA=Y -e ssrs_user=SSRSAdmin -e ssrs_password=<YOUR SSRSAdmin PASSWORD> --memory 6048mb roflinn/ssrs
 ```
 
 then access SSRS at http://localhost/reports and login using ssrs_user
