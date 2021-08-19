@@ -2,7 +2,7 @@
 
 creates a fresh install of SSRS in a container
 
-https://hub.docker.com/r/roflinn/ssrs
+https://hub.docker.com/r/roflinn/ssrs17
 
 ## Run it
 
@@ -15,13 +15,15 @@ In addtion it accepts two more env variables: </br>
 - **ssrs_user**: Name of a new admin user that will be created to login to report server
 - **ssrs_password**: Sets the password for the admin user
 
+Do not use the PWs listed in the example.  Come up with your own!!
+
 example:
 
 ```
-docker run -d -p 8433:8433 -p 8080:8080 -v C:/temp/:C:/temp/ -e sa_password=<YOUR SA PASSWORD> -e ACCEPT_EULA=Y -e ssrs_user=SSRSAdmin -e ssrs_password=<YOUR SSRSAdmin PASSWORD> --memory 6048mb roflinn/ssrs
+docker run -d -p 8433:8433 -p 8080:8080 -v C:/temp/:C:/temp/ -e sa_password=sa123#45678#pw -e ACCEPT_EULA=Y -e ssrs_user=SSRSAdmin -e ssrs_password=ssrs123#45678#pw --memory 6048mb ssrs-docker:0.1.0 ssrs17
 ```
 
-then access SSRS at http://localhost/reports and login using ssrs_user
+then access SSRS at http://localhost:8080/reports/browse/ and login using ssrs_user (SSRSAdmin)
 
 ## Tips
 

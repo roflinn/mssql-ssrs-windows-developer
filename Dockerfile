@@ -1,6 +1,6 @@
 FROM microsoft/mssql-server-windows-developer
 
-LABEL  Name=SSRS Version=0.0.4 maintainer="Ralph O"
+LABEL Name=SSRS Version=0.1.0 maintainer="Ralph O"
 
 # ENV exe "https://download.microsoft.com/download/E/6/4/E6477A2A-9B58-40F7-8AD6-62BB8491EA78/SQLServerReportingServices.exe"
 
