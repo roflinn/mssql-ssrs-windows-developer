@@ -20,7 +20,7 @@ Do not use the PWs listed in the example.  Come up with your own!!
 example:
 
 ```
-docker run -d -p 8433:8433 -p 8080:8080 -v C:/temp/:C:/temp/ -e sa_password=sa123#45678#pw -e ACCEPT_EULA=Y -e ssrs_user=SSRSAdmin -e ssrs_password=ssrs123#45678#pw --memory 6048mb ssrs-docker:0.1.0 ssrs17
+docker run -d -p 1433:1433 -p 8080:8080 -v C:/temp/:C:/temp/ -e sa_password=sa123#45678#pw -e ACCEPT_EULA=Y -e ssrs_user=SSRSAdmin -e ssrs_password=ssrs123#45678#pw --memory 6048mb ssrs-docker:0.1.0 ssrs17
 ```
 
 then access SSRS at http://localhost:8080/reports/browse/ and login using ssrs_user (SSRSAdmin)
