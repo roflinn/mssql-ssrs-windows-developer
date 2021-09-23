@@ -1,6 +1,8 @@
-FROM microsoft/mssql-server-windows-developer
+# NOTE: Microsoft no longer provides the windows mssql docker image
 
-LABEL Name=SSRS Version=0.1.0 maintainer="Ralph O"
+FROM mssql-server-windows-developer:2017-alt
+
+LABEL Name=mssql-ssrs-windows-developer Version=2017-1.0 maintainer="Ralph O"
 
 # ENV exe "https://download.microsoft.com/download/E/6/4/E6477A2A-9B58-40F7-8AD6-62BB8491EA78/SQLServerReportingServices.exe"
 
@@ -13,7 +15,7 @@ ENV sa_password="_" \
     sa_password_path="C:\ProgramData\Docker\secrets\sa-password" \
     ssrs_user="_" \
     ssrs_password="_" \
-    SSRS_edition="EVAL" \
+    SSRS_edition="DEV" \
     ssrs_password_path="C:\ProgramData\Docker\secrets\ssrs-password"
 
 SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
