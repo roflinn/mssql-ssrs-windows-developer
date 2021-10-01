@@ -1,4 +1,8 @@
 # NOTE: Microsoft no longer provides the windows mssql docker image
+# https://cloudblogs.microsoft.com/sqlserver/2019/07/01/sql-server-2019-on-windows-containers-now-in-early-adopters-program/
+# https://web.archive.org/web/20210524143153/https://docs.microsoft.com/en-us/windows-server/get-started-19/servicing-channels-19
+# https://freddysblog.com/2020/10/12/troubleshooting-business-central-on-docker/
+# https://freddysblog.com/2018/12/11/clean-up-after-yourself-docker-your-mom-isnt-here/
 
 FROM mssql-server-windows-developer:2017-alt
 
